@@ -7,7 +7,7 @@ function ProductModal({ onClose }) {
   const [editId, setEditId] = useState(null)
   const [error, setError] = useState('')
   const [searchTerm, setSearchTerm] = useState('');
-  const API_URL = 'http://localhost:3000/api'
+  const API_URL = process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL : 'http://localhost:3000/api'
 
   useEffect(() => {
     fetchProducts()

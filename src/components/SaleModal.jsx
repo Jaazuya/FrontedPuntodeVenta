@@ -7,7 +7,7 @@ function SaleModal({ onClose }) {
     const [sales, setSales] = useState([]);
     const [error, setError] = useState('');
     const [showNewSaleModal, setShowNewSaleModal] = useState(false);
-    const API_URL = 'http://localhost:3000/api';
+    const API_URL = process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL : 'http://localhost:3000/api';
 
     useEffect(() => {
         console.log('Iniciando SaleModal...');
